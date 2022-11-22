@@ -10,8 +10,15 @@ for(let i = 0; i < requi.length; i++){
 
 }
 
-
-
 let btn = document.getElementById("switch");
-btn.setAttribute("type", "submit");
 
+
+function myFunc3() {
+    let text1 = document.getElementById("input1").value;
+    document.getElementById("input1").value = document.getElementById("input2").value;
+    document.getElementById("input2").value = text1;
+}
+
+btn.addEventListener("click", function (){
+    myFunc3()
+})
